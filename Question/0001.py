@@ -41,7 +41,7 @@ def get_need_index_by_func(lst, func):
     def reshuffle_index_and_value(data):
         return map(fst, data), map(snd, data)
 
-    return list(fst(find(lambda x: func(*x[1]), get_all_permutation(lst, func.__code__.co_argcount))))
+    return list(fst(find(lambda x: func(*snd(x)), get_all_permutation(lst, func.__code__.co_argcount))))
 
 
 def get_need_index_20(lst, target):
