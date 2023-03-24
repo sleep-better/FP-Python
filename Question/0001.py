@@ -4,12 +4,12 @@
     @Author:sleep-better
     @date:2023/3/23 21:20
 """
+
+# Question_URL = "https://leetcode.cn/problems/two-sum/"
+
 from itertools import permutations
 
 from util import fst, snd, find
-
-
-# Question_URL = "https://leetcode.cn/problems/two-sum/"
 
 
 # 标准命令式
@@ -55,7 +55,9 @@ def get_need_index_20(lst, target):
 
 
 if __name__ == '__main__':
-    print(get_need_index_01([2, 7, 11, 15], 9))
-    print(get_need_index_10([2, 7, 11, 15], 9))
-    print(get_need_index_by_func([2, 7, 11, 15], lambda x, y: x + y == 9))
-    print(get_need_index_20([2, 7, 11, 15], 9))
+    nums = [2, 7, 11, 15]
+    target_value = 9
+    print(get_need_index_01(nums, target_value))
+    print(get_need_index_10(nums, target_value))
+    print(get_need_index_by_func(nums, lambda x, y: x + y == target_value))
+    print(get_need_index_20(nums, target_value))
