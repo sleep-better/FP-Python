@@ -46,11 +46,11 @@ def get_longest_10(s):
 
 # 3
 def get_str_by_len(s, length):
-    return map(lambda x: s[x:x + length + 1], range(len(s) - length))
+    return map(lambda x: s[x:x + length], range(len(s) - length + 1))
 
 
 def get_str_by_all_len(s):
-    return map(lambda x: get_str_by_len(s, x), reversed(range(len(s))))
+    return map(lambda x: get_str_by_len(s, x), reversed(range(1, len(s) + 1)))
 
 
 def get_all_substring(s):
