@@ -17,7 +17,7 @@ def find_median_sorted_arrays_01(nums1, nums2):
     if length % 2 != 0:
         return nums[len(nums) // 2]
     else:
-        return (nums[length // 2] + nums[length // 2 + 1]) / 2
+        return (nums[length // 2 - 1] + nums[length // 2]) / 2
 
 
 def find_median_sorted_arrays_02(*args):
